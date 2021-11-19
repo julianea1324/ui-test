@@ -2,7 +2,7 @@ import React from 'react'
 import './index.scss'
 export const List = ({setType}) => {
     return (
-        <div id="list">
+        <section id="list">
             <select onChange={(e)=>setType(e.target.value)}>
                 <option value="list">
                     List
@@ -11,6 +11,6 @@ export const List = ({setType}) => {
                     Grid
                 </option>
             </select>
-        </div>
+        </section>
     )
 }
