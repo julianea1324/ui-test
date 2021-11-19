@@ -1,9 +1,25 @@
-import React from 'react'
-import './index.scss'
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { dispatchItems } from "../../application/actions/Items";
+import { CardDetails } from "./cardDetail";
+import "./index.scss";
+import { List } from "./list";
 export const Card = () => {
-    return (
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi facilis ducimus quisquam! Obcaecati, atque vel, aperiam, tempora est sint fugiat odit nihil molestias assumenda explicabo ullam vitae neque nemo sed!
-        </div>
-    )
-}
+  const { items } = useSelector((state) => state.items);
+  const [type, setType] = useState("list");
+  const dispatch = useDispatch()
+  useEffect(() => {
+   dispatch(dispatchItems())
+  }, [dispatch])
+  return (
+    <section id="card" className={type}>
+      <div className="card-infinite">
+        <List setType={setType} />
+        {items?.map((e, i) => (
+          <CardDetails {...e} key={i} />
+        ))}
+      </div>
+    </section>
+  );
+};

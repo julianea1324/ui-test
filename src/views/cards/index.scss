@@ -1,0 +1,132 @@
+.grid {
+  .card-infinite {
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.5s ease-in;
+    justify-content: space-between;
+  }
+  .card-item {
+    width: 32%;
+    background-size: cover !important;
+    height: 300px !important;
+    margin: 5px;
+    transition: all 0.5s ease-in;
+    &::before {
+      background: rgba(75, 75, 75, 0.534) !important;
+    }
+    &__content {
+      flex-wrap: wrap;
+
+      &-text {
+        width: 100% !important;
+        height: 100px !important;
+        padding: 5px !important;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        
+      }
+      &-buttons {
+        width: 100% !important;
+        text-align: center;
+        p {
+          margin: 5px 0 !important;
+          text-align: center !important;
+        }
+        &__build {
+          justify-content: center;
+        }
+      }
+    }
+    &__bar {
+      height: 35px !important;
+      &-content {
+        p {
+          color: white;
+          font-size: 1rem !important;
+        }
+        figure {
+          margin: 0;
+          width: 20px !important;
+          margin: 10px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #list {
+    display: none !important;
+  }
+  #card {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    .card-infinite {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+    .card-item {
+      width: 300px;
+      background-size: cover !important;
+      height: 300px !important;
+      margin: 5px;
+      transition: all 0.5s ease-in;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      display: flex;
+      &::before {
+        background: rgba(75, 75, 75, 0.534) !important;
+      }
+      &__content {
+        flex-wrap: wrap;
+
+        &-text {
+          width: 100% !important;
+          height: 40px !important;
+          padding: 5px !important;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          margin: 4rem 0 !important;
+          justify-content: center;
+          p {
+            font-size: 18px !important;
+          }
+          h2 {
+            font-size: 3rem !important;
+          }
+        }
+        &-buttons {
+          width: 100% !important;
+          text-align: center;
+          p {
+            margin: 5px 0 !important;
+            text-align: center !important;
+          }
+          &__build {
+            justify-content: center;
+          }
+        }
+      }
+      &__bar {
+        height: 35px !important;
+        &-content {
+          p {
+            color: white;
+            font-size: 1rem !important;
+          }
+          figure {
+            margin: 0;
+            width: 20px !important;
+            margin: 10px !important;
+          }
+        }
+      }
+    }
+  }
+}

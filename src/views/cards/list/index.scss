@@ -1,0 +1,12 @@
+#list {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  select {
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    border: 2px solid black;
+  }
+}

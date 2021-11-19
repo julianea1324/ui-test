@@ -4,3 +4,4 @@ export const LOAD_ITEMS_FAILURE = '[ITEMS] load failure';
 export const UPDATED_ITEM = '[ITEMS] updated item';
 export const DELETED_ITEM = '[ITEMS] deleted item';
 export const ADD_ITEM = '[ITEMS] add item';
+export const REFRESH_ITEM = "[ITEMS] refresh item"

@@ -1,14 +1,7 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { dispatchItems } from "../application/actions/Items";
 import "./App.css";
 import { Card } from "./cards";
 
-function App() {
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(dispatchItems())
-  }, [dispatch])
+function App() { 
   return (
     <>
       <nav className="nav" role="navigation">
