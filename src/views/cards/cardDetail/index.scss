@@ -148,7 +148,7 @@
         height: 50px;
         cursor: pointer;
         &:disabled {
-          cursor: default;
+          cursor: no-drop;
         }
       }
     }
