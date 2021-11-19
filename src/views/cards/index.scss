@@ -59,12 +59,14 @@
   #list {
     display: none !important;
   }
+  .grid,
   #card {
     width: 100%;
     text-align: center;
     overflow: hidden;
     .card-infinite {
       display: flex;
+      flex-wrap: unset;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       scroll-behavior: smooth;
