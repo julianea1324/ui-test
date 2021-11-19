@@ -14,7 +14,7 @@ export const dispatchItems = () => {
     const response = data.map((e) => ({ ...e, vote: false }));
     dispatch(
       loadItemsSuccess(
-        itemsPersist.items.length === 0 ? response : itemsPersist.items
+        !itemsPersist.items.length ? response : itemsPersist.items
       )
     );
   };
